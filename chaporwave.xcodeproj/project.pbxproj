@@ -19,6 +19,8 @@
 		F686A75027A33E1E00D1A91D /* chaporwaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A74F27A33E1E00D1A91D /* chaporwaveUITests.swift */; };
 		F686A75227A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */; };
 		F686A75F27A3657200D1A91D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A75E27A3657200D1A91D /* Node.swift */; };
+		F6C2014927A81550006E8E4A /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C2014827A81550006E8E4A /* MenuScene.swift */; };
+		F6C2014D27A816F0006E8E4A /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F6C2014C27A816F0006E8E4A /* MenuScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		F686A74F27A33E1E00D1A91D /* chaporwaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaporwaveUITests.swift; sourceTree = "<group>"; };
 		F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaporwaveUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F686A75E27A3657200D1A91D /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		F6C2014827A81550006E8E4A /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		F6C2014C27A816F0006E8E4A /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F66AEC1927A8091C0024C03D /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				F686A72D27A33E1700D1A91D /* GameScene.sks */,
+				F686A73127A33E1700D1A91D /* GameScene.swift */,
+				F686A73327A33E1700D1A91D /* GameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		F686A71F27A33E1600D1A91D = {
 			isa = PBXGroup;
 			children = (
@@ -104,15 +118,14 @@
 		F686A72A27A33E1600D1A91D /* chaporwave */ = {
 			isa = PBXGroup;
 			children = (
+				F6C2014E27A81984006E8E4A /* Model */,
+				F6C2014727A81536006E8E4A /* Menu */,
+				F66AEC1927A8091C0024C03D /* Game */,
 				F686A72B27A33E1600D1A91D /* AppDelegate.swift */,
-				F686A72D27A33E1700D1A91D /* GameScene.sks */,
 				F686A72F27A33E1700D1A91D /* Actions.sks */,
-				F686A73127A33E1700D1A91D /* GameScene.swift */,
-				F686A73327A33E1700D1A91D /* GameViewController.swift */,
 				F686A73527A33E1700D1A91D /* Main.storyboard */,
 				F686A73827A33E1D00D1A91D /* Assets.xcassets */,
 				F686A73A27A33E1D00D1A91D /* LaunchScreen.storyboard */,
-				F686A75E27A3657200D1A91D /* Node.swift */,
 			);
 			path = chaporwave;
 			sourceTree = "<group>";
@@ -132,6 +145,23 @@
 				F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */,
 			);
 			path = chaporwaveUITests;
+			sourceTree = "<group>";
+		};
+		F6C2014727A81536006E8E4A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F6C2014827A81550006E8E4A /* MenuScene.swift */,
+				F6C2014C27A816F0006E8E4A /* MenuScene.sks */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		F6C2014E27A81984006E8E4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F686A75E27A3657200D1A91D /* Node.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F686A73727A33E1700D1A91D /* Main.storyboard in Resources */,
+				F6C2014D27A816F0006E8E4A /* MenuScene.sks in Resources */,
 				F686A72E27A33E1700D1A91D /* GameScene.sks in Resources */,
 				F686A73927A33E1D00D1A91D /* Assets.xcassets in Resources */,
 				F686A73C27A33E1D00D1A91D /* LaunchScreen.storyboard in Resources */,
@@ -269,6 +300,7 @@
 			files = (
 				F686A73227A33E1700D1A91D /* GameScene.swift in Sources */,
 				F686A73427A33E1700D1A91D /* GameViewController.swift in Sources */,
+				F6C2014927A81550006E8E4A /* MenuScene.swift in Sources */,
 				F686A75F27A3657200D1A91D /* Node.swift in Sources */,
 				F686A72C27A33E1600D1A91D /* AppDelegate.swift in Sources */,
 			);
