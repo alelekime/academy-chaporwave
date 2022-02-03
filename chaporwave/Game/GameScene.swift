@@ -10,12 +10,15 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var nodePrimary: SKSpriteNode!
-    private var nodeLeft: SKSpriteNode!
-    private var nodeRight: SKSpriteNode!
-    var colors = Color.allCases
-    var shapes = Shape.allCases
+    private var nodeClose: SKSpriteNode!
+    private var nodeSettings: SKSpriteNode!
     
+    private var nodePrimary: Node!
+    private var nodeLeft: Node!
+    private var nodeRight: Node!
+    
+    private var textGame: SKSpriteNode!
+    private var currentAttribute: Attribute!
     
     override func didMove(to view: SKView) {
         
@@ -24,6 +27,7 @@ class GameScene: SKScene {
     }
     
     func touchDown(atPoint pos : CGPoint) {
+        next()
         
     }
     
@@ -32,46 +36,107 @@ class GameScene: SKScene {
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        next()
     }
     
-    func next() {
+    func updateAttributeNode() {
+        currentAttribute = Attribute.allCases.randomElement()
         
-        if nodePrimary != nil{
-            nodePrimary.removeFromParent()
-            nodeLeft.removeFromParent()
-            nodeRight.removeFromParent()
-        }
+        textGame = SKSpriteNode(imageNamed: currentAttribute.rawValue)
+        textGame.position = CGPoint(x: 0, y: 340)
+        addChild(textGame)
+    }
+    
+    func createNodes() {
+        nodeClose = SKSpriteNode(imageNamed: "close")
+        nodeSettings = SKSpriteNode(imageNamed: "gear")
         
-        var colors = Color.allCases
-        var shapes = Shape.allCases
-        var color = colors.popRandomElement()
-        var shape = shapes.popRandomElement()
-        var name = shape!.rawValue + color!.rawValue
-        nodePrimary = SKSpriteNode(imageNamed: name)
-        
-        shape = shapes.popRandomElement()
-        name = shape!.rawValue + color!.rawValue
-        nodeLeft = SKSpriteNode(imageNamed: name)
-        color = colors.popRandomElement()
-        
-        name = shape!.rawValue + color!.rawValue
-        nodeRight = SKSpriteNode(imageNamed: name)
+        nodePrimary = Node()
+        nodePrimary.node.setScale(0.7)
+        nodeLeft = nodePrimary.getMatch(condition: currentAttribute)
+        nodeLeft.node.setScale(0.6)
+        nodeRight = nodePrimary.getUnmatch(condition: currentAttribute)
+        nodeRight.node.setScale(0.6)
         
         if Int.random(in: 0..<100) < 50{
             swap(&nodeLeft, &nodeRight)
         }
         
-        nodePrimary.position = CGPoint(x: 40, y: 250)
-        nodeLeft.position = CGPoint(x: -150, y: -100)
-        nodeRight.position = CGPoint(x: 150, y: -100)
+        nodeClose.position = CGPoint(x: -250, y: 600)
+        nodeSettings.position = CGPoint(x: 250, y: 600)
         
-        addChild(nodePrimary)
-        addChild(nodeLeft)
-        addChild(nodeRight)
+        nodePrimary.node.position = CGPoint(x: 26, y: 220)
+        nodeLeft.node.position = CGPoint(x: -130, y: -120)
+        nodeRight.node.position = CGPoint(x: 138, y: -120)
+        
+        addChild(nodeClose)
+        addChild(nodeSettings)
+        
+        addChild(nodePrimary.node)
+        addChild(nodeLeft.node)
+        addChild(nodeRight.node)
     }
+    
+    
+    func next() {
+        
+        if nodePrimary != nil{
+            nodePrimary.node.removeFromParent()
+            nodeLeft.node.removeFromParent()
+            nodeRight.node.removeFromParent()
+            textGame.removeFromParent()
+        }
+        updateAttributeNode()
+        createNodes()
+    }
+    
+    func checkAnswer(check: Bool) {
+        if check {
+            backgroundColor = .green
+            print("true")
+        } else {
+            backgroundColor = .red
+            print("false")
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.backgroundColor = UIColor(named: "backgroundColor")!
+        }
+    }
+    
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+        for touch in touches {
+            let location = touch.location(in: self);
+            var check: Bool!
+            
+            if atPoint(location) == nodeLeft.node {
+                check = nodePrimary.isMatch(nodeLeft, currentAttribute)
+                checkAnswer(check: check)
+                next()
+            }
+            if atPoint(location) == nodeRight.node {
+                check = nodePrimary.isMatch(nodeRight, currentAttribute)
+                checkAnswer(check: check)
+                next()
+            }
+            
+            
+            
+            
+            if atPoint(location) == nodeClose {
+                if let scene = MenuScene(fileNamed: "MenuScene") {
+                    scene.scaleMode = .aspectFill
+                    view!.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+                }
+            }
+            if atPoint(location) == nodeSettings {
+                if let scene = SettingsScene(fileNamed: "SettingsScene") {
+                    scene.scaleMode = .aspectFill
+                    view!.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+                }
+            }
+            
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

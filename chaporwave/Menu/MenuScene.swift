@@ -10,35 +10,18 @@ import SpriteKit
 class MenuScene: SKScene {
     
     private var logo: SKSpriteNode!
-    private var startButton: SKSpriteNode!
+    private var playButton: SKSpriteNode!
     
     override func didMove(to view: SKView) {
         
-        backgroundColor = UIColor(named: "backgroundColor")!
         addButtons()
     }
     
     func addButtons() {
-        logo = SKSpriteNode(imageNamed: "logo")
-        logo.name = "logo"
-        logo.position = CGPoint(x: 0, y: 300)
-        addChild(logo)
         
-        let labelStartButton = SKLabelNode(fontNamed: "Arial")
-        
-        labelStartButton.text = "Start"
-        labelStartButton.fontColor = .black
-        labelStartButton.verticalAlignmentMode = .center
-        labelStartButton.fontSize = 29.0
-        labelStartButton.zPosition = 1
-        
-        
-        
-        startButton = SKSpriteNode(color: .white, size: CGSize(width: 150, height: 100))
-        
-        startButton.addChild(labelStartButton)
-        startButton.position = CGPoint(x: 0, y: 0)
-        addChild(startButton)
+        playButton = SKSpriteNode(imageNamed: "playButton")
+        playButton.position = CGPoint(x: 0, y: -480)
+        addChild(playButton)
         
     }
     
@@ -46,7 +29,7 @@ class MenuScene: SKScene {
         for touch in touches {
             let location = touch.location(in: self);
             
-            if atPoint(location) == startButton {
+            if atPoint(location) == playButton {
                 
                 if let scene = GameScene(fileNamed: "GameScene") {
                     scene.scaleMode = .aspectFill

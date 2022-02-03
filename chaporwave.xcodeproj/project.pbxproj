@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F65D0C1727AAB7DC006BEBB8 /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F65D0C1627AAB7DC006BEBB8 /* SettingsScene.sks */; };
+		F65D0C1927AAB7E7006BEBB8 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D0C1827AAB7E7006BEBB8 /* SettingsScene.swift */; };
 		F686A72C27A33E1600D1A91D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A72B27A33E1600D1A91D /* AppDelegate.swift */; };
 		F686A72E27A33E1700D1A91D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F686A72D27A33E1700D1A91D /* GameScene.sks */; };
 		F686A73027A33E1700D1A91D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F686A72F27A33E1700D1A91D /* Actions.sks */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F65D0C1627AAB7DC006BEBB8 /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
+		F65D0C1827AAB7E7006BEBB8 /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
 		F686A72827A33E1600D1A91D /* chaporwave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chaporwave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F686A72B27A33E1600D1A91D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F686A72D27A33E1700D1A91D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -85,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F65D0C1527AAB7C0006BEBB8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F65D0C1627AAB7DC006BEBB8 /* SettingsScene.sks */,
+				F65D0C1827AAB7E7006BEBB8 /* SettingsScene.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		F66AEC1927A8091C0024C03D /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +131,7 @@
 		F686A72A27A33E1600D1A91D /* chaporwave */ = {
 			isa = PBXGroup;
 			children = (
+				F65D0C1527AAB7C0006BEBB8 /* Settings */,
 				F6C2014E27A81984006E8E4A /* Model */,
 				F6C2014727A81536006E8E4A /* Menu */,
 				F66AEC1927A8091C0024C03D /* Game */,
@@ -274,6 +288,7 @@
 				F686A73927A33E1D00D1A91D /* Assets.xcassets in Resources */,
 				F686A73C27A33E1D00D1A91D /* LaunchScreen.storyboard in Resources */,
 				F686A73027A33E1700D1A91D /* Actions.sks in Resources */,
+				F65D0C1727AAB7DC006BEBB8 /* SettingsScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +318,7 @@
 				F6C2014927A81550006E8E4A /* MenuScene.swift in Sources */,
 				F686A75F27A3657200D1A91D /* Node.swift in Sources */,
 				F686A72C27A33E1600D1A91D /* AppDelegate.swift in Sources */,
+				F65D0C1927AAB7E7006BEBB8 /* SettingsScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
