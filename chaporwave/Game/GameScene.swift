@@ -1,10 +1,3 @@
-//
-//  GameScene.swift
-//  chaporwave
-//
-//  Created by Alessandra Souza da Silva on 27/01/22.
-//
-
 import SpriteKit
 import GameplayKit
 
@@ -12,6 +5,9 @@ class GameScene: SKScene {
     
     private var nodeClose: SKSpriteNode!
     private var nodeSettings: SKSpriteNode!
+    
+    private var nodeScore: SKLabelNode!
+    private var score: Int! = 0
     
     private var nodePrimary: Node!
     private var nodeLeft: Node!
@@ -21,6 +17,7 @@ class GameScene: SKScene {
     private var currentAttribute: Attribute!
     
     override func didMove(to view: SKView) {
+        addScore()
         
         backgroundColor = UIColor(named: "backgroundColor")!
         next()
@@ -46,10 +43,21 @@ class GameScene: SKScene {
         addChild(textGame)
     }
     
+    
+    func addScore() {
+        nodeScore = SKLabelNode(fontNamed: "Chalkduster")
+        nodeScore.fontSize = 90
+        nodeScore.fontColor = SKColor.white
+        nodeScore.position = CGPoint(x: 0, y: 490)
+        nodeScore.text = "0000"
+        
+        addChild(nodeScore)
+    }
+    
+    
     func createNodes() {
         nodeClose = SKSpriteNode(imageNamed: "close")
         nodeSettings = SKSpriteNode(imageNamed: "gear")
-        
         nodePrimary = Node()
         nodePrimary.node.setScale(0.7)
         nodeLeft = nodePrimary.getMatch(condition: currentAttribute)
@@ -70,10 +78,19 @@ class GameScene: SKScene {
         
         addChild(nodeClose)
         addChild(nodeSettings)
-        
         addChild(nodePrimary.node)
         addChild(nodeLeft.node)
         addChild(nodeRight.node)
+    }
+    
+    
+    func updateScore(check: Bool) {
+        if check {
+            score += 10
+        } else {
+            score -= 10
+        }
+        nodeScore.text = String(format: "%04d", score)
     }
     
     
@@ -89,6 +106,7 @@ class GameScene: SKScene {
         createNodes()
     }
     
+    
     func checkAnswer(check: Bool) {
         if check {
             backgroundColor = .green
@@ -102,46 +120,51 @@ class GameScene: SKScene {
         }
     }
     
+    func updateGame(check: Bool) {
+        checkAnswer(check: check)
+        updateScore(check: check)
+        next()
+    }
+    
+    func matchIsPrimaryNode(_ node: Node) -> Bool {
+        nodePrimary.isMatch(node, currentAttribute)
+    }
+    
+    func testMacth(on node: Node, location: CGPoint) {
+        if atPoint(location) == node.node {
+            let check = matchIsPrimaryNode(node)
+            updateGame(check: check)
+        }
+    }
+    
+    func changeScene(scene: SKScene) {
+        scene.scaleMode = .aspectFill
+        view!.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            let location = touch.location(in: self);
-            var check: Bool!
+            let location = touch.location(in: self)
             
-            if atPoint(location) == nodeLeft.node {
-                check = nodePrimary.isMatch(nodeLeft, currentAttribute)
-                checkAnswer(check: check)
-                next()
-            }
-            if atPoint(location) == nodeRight.node {
-                check = nodePrimary.isMatch(nodeRight, currentAttribute)
-                checkAnswer(check: check)
-                next()
-            }
-            
-            
-            
-            
+            testMacth(on: nodeLeft, location: location)
+            testMacth(on: nodeRight, location: location)
+        
             if atPoint(location) == nodeClose {
                 if let scene = MenuScene(fileNamed: "MenuScene") {
-                    scene.scaleMode = .aspectFill
-                    view!.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+                    changeScene(scene: scene)
                 }
             }
             if atPoint(location) == nodeSettings {
                 if let scene = SettingsScene(fileNamed: "SettingsScene") {
-                    scene.scaleMode = .aspectFill
-                    view!.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+                    changeScene(scene: scene)
                 }
             }
-            
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
-        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -157,11 +180,8 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
-    
-    
-    
+   
 }
-
 
 
 extension Array {
