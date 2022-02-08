@@ -6,6 +6,7 @@
 //
 
 import SpriteKit
+import FirebaseAnalytics
 
 class MenuScene: SKScene {
     
@@ -30,7 +31,8 @@ class MenuScene: SKScene {
             let location = touch.location(in: self);
             
             if atPoint(location) == playButton {
-                
+                Analytics.logEvent("level_start", parameters: nil)
+                // alterar entre endless e por minuto
                 if let scene = GameScene(fileNamed: "GameScene") {
                     scene.scaleMode = .aspectFill
                     view!.presentScene(scene, transition: SKTransition.fade(withDuration: 1))

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342D05472E7009F79DB2C180 /* Pods_chaporwaveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED34DDCDB35441A6FA5319DE /* Pods_chaporwaveTests.framework */; };
+		CA5099A71B279B32C2B16171 /* Pods_chaporwave_chaporwaveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A5E5E576ED79DE5711E317 /* Pods_chaporwave_chaporwaveUITests.framework */; };
+		F61D021327B29653009449D0 /* Pods_chaporwave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DDE456770AE1ACF83522ED /* Pods_chaporwave.framework */; };
+		F61D021427B29653009449D0 /* Pods_chaporwave.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21DDE456770AE1ACF83522ED /* Pods_chaporwave.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F62A7C1827AD642F00F9FC8B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62A7C1727AD642F00F9FC8B /* GameKit.framework */; };
 		F65D0C1727AAB7DC006BEBB8 /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F65D0C1627AAB7DC006BEBB8 /* SettingsScene.sks */; };
 		F65D0C1927AAB7E7006BEBB8 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65D0C1827AAB7E7006BEBB8 /* SettingsScene.swift */; };
 		F686A72C27A33E1600D1A91D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A72B27A33E1600D1A91D /* AppDelegate.swift */; };
@@ -21,6 +26,15 @@
 		F686A75027A33E1E00D1A91D /* chaporwaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A74F27A33E1E00D1A91D /* chaporwaveUITests.swift */; };
 		F686A75227A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */; };
 		F686A75F27A3657200D1A91D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A75E27A3657200D1A91D /* Node.swift */; };
+		F68BD2A127B2992500730219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2A027B2992500730219 /* GoogleService-Info.plist */; };
+		F68BD2A227B2992500730219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2A027B2992500730219 /* GoogleService-Info.plist */; };
+		F68BD2A327B2992500730219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2A027B2992500730219 /* GoogleService-Info.plist */; };
+		F68BD2A727B2A63C00730219 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68BD2A627B2A63C00730219 /* GameOverScene.swift */; };
+		F68BD2A827B2A63C00730219 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68BD2A627B2A63C00730219 /* GameOverScene.swift */; };
+		F68BD2A927B2A63C00730219 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68BD2A627B2A63C00730219 /* GameOverScene.swift */; };
+		F68BD2AB27B2A65700730219 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2AA27B2A65700730219 /* GameOverScene.sks */; };
+		F68BD2AC27B2A65700730219 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2AA27B2A65700730219 /* GameOverScene.sks */; };
+		F68BD2AD27B2A65700730219 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2AA27B2A65700730219 /* GameOverScene.sks */; };
 		F6C2014927A81550006E8E4A /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C2014827A81550006E8E4A /* MenuScene.swift */; };
 		F6C2014D27A816F0006E8E4A /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F6C2014C27A816F0006E8E4A /* MenuScene.sks */; };
 /* End PBXBuildFile section */
@@ -42,7 +56,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F61D021527B29653009449D0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F61D021427B29653009449D0 /* Pods_chaporwave.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0D09C36E3FBEA52F16B771D3 /* Pods-chaporwaveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwaveTests.release.xcconfig"; path = "Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests.release.xcconfig"; sourceTree = "<group>"; };
+		21DDE456770AE1ACF83522ED /* Pods_chaporwave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chaporwave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		786A051CBDD9B8DC044AAE89 /* Pods-chaporwave-chaporwaveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwave-chaporwaveUITests.debug.xcconfig"; path = "Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		926601DC5E7ED70F38F5F916 /* Pods-chaporwave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwave.release.xcconfig"; path = "Target Support Files/Pods-chaporwave/Pods-chaporwave.release.xcconfig"; sourceTree = "<group>"; };
+		96BC71449BDD82274234E31A /* Pods-chaporwaveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwaveTests.debug.xcconfig"; path = "Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B30080E0B3B7270CE303EE7F /* Pods-chaporwave-chaporwaveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwave-chaporwaveUITests.release.xcconfig"; path = "Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C7A5E5E576ED79DE5711E317 /* Pods_chaporwave_chaporwaveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chaporwave_chaporwaveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE1B98D7A36F73E51F6EF47 /* Pods-chaporwave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwave.debug.xcconfig"; path = "Target Support Files/Pods-chaporwave/Pods-chaporwave.debug.xcconfig"; sourceTree = "<group>"; };
+		ED34DDCDB35441A6FA5319DE /* Pods_chaporwaveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chaporwaveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F62A7C1727AD642F00F9FC8B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		F62A7C1927AD68AF00F9FC8B /* chaporwave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = chaporwave.entitlements; sourceTree = "<group>"; };
 		F65D0C1627AAB7DC006BEBB8 /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
 		F65D0C1827AAB7E7006BEBB8 /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
 		F686A72827A33E1600D1A91D /* chaporwave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chaporwave.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +99,9 @@
 		F686A74F27A33E1E00D1A91D /* chaporwaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaporwaveUITests.swift; sourceTree = "<group>"; };
 		F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaporwaveUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F686A75E27A3657200D1A91D /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		F68BD2A027B2992500730219 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F68BD2A627B2A63C00730219 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		F68BD2AA27B2A65700730219 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
 		F6C2014827A81550006E8E4A /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		F6C2014C27A816F0006E8E4A /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F61D021327B29653009449D0 /* Pods_chaporwave.framework in Frameworks */,
+				F62A7C1827AD642F00F9FC8B /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342D05472E7009F79DB2C180 /* Pods_chaporwaveTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,12 +128,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5099A71B279B32C2B16171 /* Pods_chaporwave_chaporwaveUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CF5E14441E12B4EA2997644 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCE1B98D7A36F73E51F6EF47 /* Pods-chaporwave.debug.xcconfig */,
+				926601DC5E7ED70F38F5F916 /* Pods-chaporwave.release.xcconfig */,
+				786A051CBDD9B8DC044AAE89 /* Pods-chaporwave-chaporwaveUITests.debug.xcconfig */,
+				B30080E0B3B7270CE303EE7F /* Pods-chaporwave-chaporwaveUITests.release.xcconfig */,
+				96BC71449BDD82274234E31A /* Pods-chaporwaveTests.debug.xcconfig */,
+				0D09C36E3FBEA52F16B771D3 /* Pods-chaporwaveTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F62A7C1627AD642F00F9FC8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F62A7C1727AD642F00F9FC8B /* GameKit.framework */,
+				21DDE456770AE1ACF83522ED /* Pods_chaporwave.framework */,
+				C7A5E5E576ED79DE5711E317 /* Pods_chaporwave_chaporwaveUITests.framework */,
+				ED34DDCDB35441A6FA5319DE /* Pods_chaporwaveTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F65D0C1527AAB7C0006BEBB8 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +185,8 @@
 				F686A74427A33E1E00D1A91D /* chaporwaveTests */,
 				F686A74E27A33E1E00D1A91D /* chaporwaveUITests */,
 				F686A72927A33E1600D1A91D /* Products */,
+				F62A7C1627AD642F00F9FC8B /* Frameworks */,
+				8CF5E14441E12B4EA2997644 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,12 +203,15 @@
 		F686A72A27A33E1600D1A91D /* chaporwave */ = {
 			isa = PBXGroup;
 			children = (
+				F62A7C1927AD68AF00F9FC8B /* chaporwave.entitlements */,
 				F65D0C1527AAB7C0006BEBB8 /* Settings */,
 				F6C2014E27A81984006E8E4A /* Model */,
+				F68BD2A527B2A61A00730219 /* GameOver */,
 				F6C2014727A81536006E8E4A /* Menu */,
 				F66AEC1927A8091C0024C03D /* Game */,
 				F686A72B27A33E1600D1A91D /* AppDelegate.swift */,
 				F686A72F27A33E1700D1A91D /* Actions.sks */,
+				F68BD2A027B2992500730219 /* GoogleService-Info.plist */,
 				F686A73527A33E1700D1A91D /* Main.storyboard */,
 				F686A73827A33E1D00D1A91D /* Assets.xcassets */,
 				F686A73A27A33E1D00D1A91D /* LaunchScreen.storyboard */,
@@ -159,6 +234,15 @@
 				F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */,
 			);
 			path = chaporwaveUITests;
+			sourceTree = "<group>";
+		};
+		F68BD2A527B2A61A00730219 /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+				F68BD2A627B2A63C00730219 /* GameOverScene.swift */,
+				F68BD2AA27B2A65700730219 /* GameOverScene.sks */,
+			);
+			path = GameOver;
 			sourceTree = "<group>";
 		};
 		F6C2014727A81536006E8E4A /* Menu */ = {
@@ -185,9 +269,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F686A75527A33E1E00D1A91D /* Build configuration list for PBXNativeTarget "chaporwave" */;
 			buildPhases = (
+				87822BCBB5FE2F7AAE8741FC /* [CP] Check Pods Manifest.lock */,
 				F686A72427A33E1600D1A91D /* Sources */,
 				F686A72527A33E1600D1A91D /* Frameworks */,
 				F686A72627A33E1600D1A91D /* Resources */,
+				F61D021527B29653009449D0 /* Embed Frameworks */,
+				2AAE339352B77AA797A1EE49 /* [CP] Embed Pods Frameworks */,
+				F68BD2A427B29B1900730219 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -202,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F686A75827A33E1E00D1A91D /* Build configuration list for PBXNativeTarget "chaporwaveTests" */;
 			buildPhases = (
+				FFF3D20C9B7BEA89DE4EE7B1 /* [CP] Check Pods Manifest.lock */,
 				F686A73D27A33E1E00D1A91D /* Sources */,
 				F686A73E27A33E1E00D1A91D /* Frameworks */,
 				F686A73F27A33E1E00D1A91D /* Resources */,
+				3A9736BD44371E58F07F69D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,9 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F686A75B27A33E1E00D1A91D /* Build configuration list for PBXNativeTarget "chaporwaveUITests" */;
 			buildPhases = (
+				3AD5A0CBF574022DC0C7CC2C /* [CP] Check Pods Manifest.lock */,
 				F686A74727A33E1E00D1A91D /* Sources */,
 				F686A74827A33E1E00D1A91D /* Frameworks */,
 				F686A74927A33E1E00D1A91D /* Resources */,
+				06495053B323A4F697291D68 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,11 +375,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F686A73727A33E1700D1A91D /* Main.storyboard in Resources */,
+				F68BD2A127B2992500730219 /* GoogleService-Info.plist in Resources */,
 				F6C2014D27A816F0006E8E4A /* MenuScene.sks in Resources */,
 				F686A72E27A33E1700D1A91D /* GameScene.sks in Resources */,
 				F686A73927A33E1D00D1A91D /* Assets.xcassets in Resources */,
 				F686A73C27A33E1D00D1A91D /* LaunchScreen.storyboard in Resources */,
 				F686A73027A33E1700D1A91D /* Actions.sks in Resources */,
+				F68BD2AB27B2A65700730219 /* GameOverScene.sks in Resources */,
 				F65D0C1727AAB7DC006BEBB8 /* SettingsScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +390,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68BD2AC27B2A65700730219 /* GameOverScene.sks in Resources */,
+				F68BD2A227B2992500730219 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,10 +399,151 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68BD2AD27B2A65700730219 /* GameOverScene.sks in Resources */,
+				F68BD2A327B2992500730219 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06495053B323A4F697291D68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AAE339352B77AA797A1EE49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwave/Pods-chaporwave-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwave/Pods-chaporwave-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chaporwave/Pods-chaporwave-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A9736BD44371E58F07F69D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AD5A0CBF574022DC0C7CC2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chaporwave-chaporwaveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87822BCBB5FE2F7AAE8741FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chaporwave-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F68BD2A427B29B1900730219 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		FFF3D20C9B7BEA89DE4EE7B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chaporwaveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F686A72427A33E1600D1A91D /* Sources */ = {
@@ -315,6 +552,7 @@
 			files = (
 				F686A73227A33E1700D1A91D /* GameScene.swift in Sources */,
 				F686A73427A33E1700D1A91D /* GameViewController.swift in Sources */,
+				F68BD2A727B2A63C00730219 /* GameOverScene.swift in Sources */,
 				F6C2014927A81550006E8E4A /* MenuScene.swift in Sources */,
 				F686A75F27A3657200D1A91D /* Node.swift in Sources */,
 				F686A72C27A33E1600D1A91D /* AppDelegate.swift in Sources */,
@@ -326,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68BD2A827B2A63C00730219 /* GameOverScene.swift in Sources */,
 				F686A74627A33E1E00D1A91D /* chaporwaveTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F686A75227A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift in Sources */,
+				F68BD2A927B2A63C00730219 /* GameOverScene.swift in Sources */,
 				F686A75027A33E1E00D1A91D /* chaporwaveUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,16 +732,20 @@
 		};
 		F686A75627A33E1E00D1A91D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE1B98D7A36F73E51F6EF47 /* Pods-chaporwave.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = chaporwave/chaporwave.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QGJM8YU43J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -520,9 +764,11 @@
 		};
 		F686A75727A33E1E00D1A91D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 926601DC5E7ED70F38F5F916 /* Pods-chaporwave.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = chaporwave/chaporwave.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QGJM8YU43J;
@@ -530,6 +776,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -548,6 +795,7 @@
 		};
 		F686A75927A33E1E00D1A91D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BC71449BDD82274234E31A /* Pods-chaporwaveTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -568,6 +816,7 @@
 		};
 		F686A75A27A33E1E00D1A91D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D09C36E3FBEA52F16B771D3 /* Pods-chaporwaveTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -588,6 +837,7 @@
 		};
 		F686A75C27A33E1E00D1A91D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 786A051CBDD9B8DC044AAE89 /* Pods-chaporwave-chaporwaveUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -606,6 +856,7 @@
 		};
 		F686A75D27A33E1E00D1A91D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B30080E0B3B7270CE303EE7F /* Pods-chaporwave-chaporwaveUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

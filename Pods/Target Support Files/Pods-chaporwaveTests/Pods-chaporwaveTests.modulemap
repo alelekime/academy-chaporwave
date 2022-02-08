@@ -1,0 +1,6 @@
+framework module Pods_chaporwaveTests {
+  umbrella header "Pods-chaporwaveTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

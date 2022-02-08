@@ -1,5 +1,7 @@
 import SpriteKit
 import GameplayKit
+import FirebaseAnalytics
+
 
 class GameScene: SKScene {
     
@@ -24,7 +26,6 @@ class GameScene: SKScene {
     }
     
     func touchDown(atPoint pos : CGPoint) {
-        next()
         
     }
     
@@ -83,6 +84,17 @@ class GameScene: SKScene {
         addChild(nodeRight.node)
     }
     
+    func cleanScreen() {
+        nodePrimary.node.removeFromParent()
+        nodeLeft.node.removeFromParent()
+        nodeRight.node.removeFromParent()
+        textGame.removeFromParent()
+        nodeClose.removeFromParent()
+        nodeSettings.removeFromParent()
+        nodeScore.removeFromParent()
+    }
+    
+    
     
     func updateScore(check: Bool) {
         if check {
@@ -91,11 +103,18 @@ class GameScene: SKScene {
             score -= 10
         }
         nodeScore.text = String(format: "%04d", score)
+        
+    }
+    func gameOver(check: Bool){
+        if !check {
+            Analytics.logEvent("level_end", parameters: nil)
+            if let scene = GameOverScene(fileNamed: "GameOverScene") {
+                changeScene(scene: scene)
+            }
+        }
     }
     
-    
     func next() {
-        
         if nodePrimary != nil{
             nodePrimary.node.removeFromParent()
             nodeLeft.node.removeFromParent()
@@ -133,6 +152,7 @@ class GameScene: SKScene {
     func testMacth(on node: Node, location: CGPoint) {
         if atPoint(location) == node.node {
             let check = matchIsPrimaryNode(node)
+            gameOver(check: check)
             updateGame(check: check)
         }
     }
@@ -149,7 +169,7 @@ class GameScene: SKScene {
             
             testMacth(on: nodeLeft, location: location)
             testMacth(on: nodeRight, location: location)
-        
+            
             if atPoint(location) == nodeClose {
                 if let scene = MenuScene(fileNamed: "MenuScene") {
                     changeScene(scene: scene)
@@ -180,7 +200,7 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
-   
+    
 }
 
 
