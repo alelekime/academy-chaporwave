@@ -1,15 +1,14 @@
+
 import SpriteKit
 import GameplayKit
 import FirebaseAnalytics
 
 
+
 class GameScene: SKScene {
-    
-    private var nodeClose: SKSpriteNode!
-    private var nodeSettings: SKSpriteNode!
-    
+
     private var nodeScore: SKLabelNode!
-    private var score: Int! = 0
+    
     
     private var nodePrimary: Node!
     private var nodeLeft: Node!
@@ -18,11 +17,12 @@ class GameScene: SKScene {
     private var textGame: SKSpriteNode!
     private var currentAttribute: Attribute!
     
+    
+    weak var gameVC:GameViewController?
+    
     override func didMove(to view: SKView) {
         addScore()
-        
-        backgroundColor = UIColor(named: "backgroundColor")!
-        next()
+        reset()
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -57,8 +57,6 @@ class GameScene: SKScene {
     
     
     func createNodes() {
-        nodeClose = SKSpriteNode(imageNamed: "close")
-        nodeSettings = SKSpriteNode(imageNamed: "gear")
         nodePrimary = Node()
         nodePrimary.node.setScale(0.7)
         nodeLeft = nodePrimary.getMatch(condition: currentAttribute)
@@ -70,15 +68,10 @@ class GameScene: SKScene {
             swap(&nodeLeft, &nodeRight)
         }
         
-        nodeClose.position = CGPoint(x: -250, y: 600)
-        nodeSettings.position = CGPoint(x: 250, y: 600)
-        
         nodePrimary.node.position = CGPoint(x: 26, y: 220)
         nodeLeft.node.position = CGPoint(x: -130, y: -120)
         nodeRight.node.position = CGPoint(x: 138, y: -120)
-        
-        addChild(nodeClose)
-        addChild(nodeSettings)
+
         addChild(nodePrimary.node)
         addChild(nodeLeft.node)
         addChild(nodeRight.node)
@@ -89,8 +82,6 @@ class GameScene: SKScene {
         nodeLeft.node.removeFromParent()
         nodeRight.node.removeFromParent()
         textGame.removeFromParent()
-        nodeClose.removeFromParent()
-        nodeSettings.removeFromParent()
         nodeScore.removeFromParent()
     }
     
@@ -98,33 +89,39 @@ class GameScene: SKScene {
     
     func updateScore(check: Bool) {
         if check {
-            score += 10
+            GameManager.score += 10
         } else {
-            score -= 10
+            GameManager.score -= 10
         }
-        nodeScore.text = String(format: "%04d", score)
+        nodeScore.text = String(format: "%04d", GameManager.score)
+        print("score: \(GameManager.score)")
         
     }
-    func gameOver(check: Bool){
+    func gameOverCheck(check: Bool){
         if !check {
             Analytics.logEvent("level_end", parameters: nil)
-            if let scene = GameOverScene(fileNamed: "GameOverScene") {
-                changeScene(scene: scene)
-            }
+            gameVC!.showAd()
+            
         }
     }
     
-    func next() {
+    func reset() {
         if nodePrimary != nil{
             nodePrimary.node.removeFromParent()
             nodeLeft.node.removeFromParent()
             nodeRight.node.removeFromParent()
             textGame.removeFromParent()
         }
+        
         updateAttributeNode()
         createNodes()
     }
     
+    func resetScore() {
+        GameManager.score = 0
+        nodeScore.text = String(format: "%04d", GameManager.score)
+        
+    }
     
     func checkAnswer(check: Bool) {
         if check {
@@ -142,7 +139,7 @@ class GameScene: SKScene {
     func updateGame(check: Bool) {
         checkAnswer(check: check)
         updateScore(check: check)
-        next()
+        reset()
     }
     
     func matchIsPrimaryNode(_ node: Node) -> Bool {
@@ -152,7 +149,7 @@ class GameScene: SKScene {
     func testMacth(on node: Node, location: CGPoint) {
         if atPoint(location) == node.node {
             let check = matchIsPrimaryNode(node)
-            gameOver(check: check)
+            gameOverCheck(check: check)
             updateGame(check: check)
         }
     }
@@ -170,16 +167,6 @@ class GameScene: SKScene {
             testMacth(on: nodeLeft, location: location)
             testMacth(on: nodeRight, location: location)
             
-            if atPoint(location) == nodeClose {
-                if let scene = MenuScene(fileNamed: "MenuScene") {
-                    changeScene(scene: scene)
-                }
-            }
-            if atPoint(location) == nodeSettings {
-                if let scene = SettingsScene(fileNamed: "SettingsScene") {
-                    changeScene(scene: scene)
-                }
-            }
         }
     }
     

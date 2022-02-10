@@ -7,6 +7,7 @@ target 'chaporwave' do
   pod 'Firebase'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  pod 'Google-Mobile-Ads-SDK'
   # Pods for chaporwave
 
   target 'chaporwaveTests' do
@@ -14,6 +15,7 @@ target 'chaporwave' do
   pod 'Firebase'
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Crashlytics'
+  pod 'Google-Mobile-Ads-SDK'
     # Pods for testing
   end
 
@@ -22,6 +24,7 @@ target 'chaporwave' do
     pod 'Firebase'
     pod 'Firebase/Analytics'
     pod 'Firebase/Crashlytics'
+    pod 'Google-Mobile-Ads-SDK'
   end
 
 end

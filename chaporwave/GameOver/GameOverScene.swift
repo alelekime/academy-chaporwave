@@ -60,15 +60,17 @@ class GameOverScene: SKScene {
         for touch in touches {
             let location = touch.location(in: self)
             
-            if atPoint(location) == nodeMenu {
-                if let scene = MenuScene(fileNamed: "MenuScene") {
-                    changeScene(scene: scene)
-                }
-            }
+//            if atPoint(location) == nodeMenu {
+//                if let scene = MenuScene(fileNamed: "MenuScene") {
+//                    scene.scaleMode = .aspectFill
+//                    view!.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+//                }
+//            }
             if atPoint(location) == nodeNewGame {
                 Analytics.logEvent("level_reset", parameters: nil)
                 if let scene = GameScene(fileNamed: "GameScene") {
-                    changeScene(scene: scene)
+                    scene.scaleMode = .aspectFill
+                    view!.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
                 }
             }
         }

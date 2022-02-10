@@ -26,6 +26,7 @@
 		F686A75027A33E1E00D1A91D /* chaporwaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A74F27A33E1E00D1A91D /* chaporwaveUITests.swift */; };
 		F686A75227A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */; };
 		F686A75F27A3657200D1A91D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A75E27A3657200D1A91D /* Node.swift */; };
+		F68B53AE27B5351500AF0DF3 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B53AD27B5351500AF0DF3 /* GameManager.swift */; };
 		F68BD2A127B2992500730219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2A027B2992500730219 /* GoogleService-Info.plist */; };
 		F68BD2A227B2992500730219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2A027B2992500730219 /* GoogleService-Info.plist */; };
 		F68BD2A327B2992500730219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2A027B2992500730219 /* GoogleService-Info.plist */; };
@@ -35,8 +36,8 @@
 		F68BD2AB27B2A65700730219 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2AA27B2A65700730219 /* GameOverScene.sks */; };
 		F68BD2AC27B2A65700730219 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2AA27B2A65700730219 /* GameOverScene.sks */; };
 		F68BD2AD27B2A65700730219 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2AA27B2A65700730219 /* GameOverScene.sks */; };
-		F6C2014927A81550006E8E4A /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C2014827A81550006E8E4A /* MenuScene.swift */; };
-		F6C2014D27A816F0006E8E4A /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F6C2014C27A816F0006E8E4A /* MenuScene.sks */; };
+		F6C0CFA327B407C800212B82 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0CFA227B407C800212B82 /* MenuViewController.swift */; };
+		F6C0CFA527B444ED00212B82 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0CFA427B444ED00212B82 /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,11 +100,13 @@
 		F686A74F27A33E1E00D1A91D /* chaporwaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaporwaveUITests.swift; sourceTree = "<group>"; };
 		F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaporwaveUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F686A75E27A3657200D1A91D /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		F68B53AD27B5351500AF0DF3 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		F68BD2A027B2992500730219 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F68BD2A627B2A63C00730219 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		F68BD2AA27B2A65700730219 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
-		F6C2014827A81550006E8E4A /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
-		F6C2014C27A816F0006E8E4A /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		F6C0CFA127B3EBB900212B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F6C0CFA227B407C800212B82 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F6C0CFA427B444ED00212B82 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,7 @@
 		F686A72A27A33E1600D1A91D /* chaporwave */ = {
 			isa = PBXGroup;
 			children = (
+				F6C0CFA127B3EBB900212B82 /* Info.plist */,
 				F62A7C1927AD68AF00F9FC8B /* chaporwave.entitlements */,
 				F65D0C1527AAB7C0006BEBB8 /* Settings */,
 				F6C2014E27A81984006E8E4A /* Model */,
@@ -215,6 +219,7 @@
 				F686A73527A33E1700D1A91D /* Main.storyboard */,
 				F686A73827A33E1D00D1A91D /* Assets.xcassets */,
 				F686A73A27A33E1D00D1A91D /* LaunchScreen.storyboard */,
+				F68B53AD27B5351500AF0DF3 /* GameManager.swift */,
 			);
 			path = chaporwave;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			children = (
 				F68BD2A627B2A63C00730219 /* GameOverScene.swift */,
 				F68BD2AA27B2A65700730219 /* GameOverScene.sks */,
+				F6C0CFA427B444ED00212B82 /* GameOverViewController.swift */,
 			);
 			path = GameOver;
 			sourceTree = "<group>";
@@ -248,8 +254,7 @@
 		F6C2014727A81536006E8E4A /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				F6C2014827A81550006E8E4A /* MenuScene.swift */,
-				F6C2014C27A816F0006E8E4A /* MenuScene.sks */,
+				F6C0CFA227B407C800212B82 /* MenuViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -376,7 +381,6 @@
 			files = (
 				F686A73727A33E1700D1A91D /* Main.storyboard in Resources */,
 				F68BD2A127B2992500730219 /* GoogleService-Info.plist in Resources */,
-				F6C2014D27A816F0006E8E4A /* MenuScene.sks in Resources */,
 				F686A72E27A33E1700D1A91D /* GameScene.sks in Resources */,
 				F686A73927A33E1D00D1A91D /* Assets.xcassets in Resources */,
 				F686A73C27A33E1D00D1A91D /* LaunchScreen.storyboard in Resources */,
@@ -551,12 +555,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F686A73227A33E1700D1A91D /* GameScene.swift in Sources */,
+				F68B53AE27B5351500AF0DF3 /* GameManager.swift in Sources */,
 				F686A73427A33E1700D1A91D /* GameViewController.swift in Sources */,
 				F68BD2A727B2A63C00730219 /* GameOverScene.swift in Sources */,
-				F6C2014927A81550006E8E4A /* MenuScene.swift in Sources */,
 				F686A75F27A3657200D1A91D /* Node.swift in Sources */,
+				F6C0CFA527B444ED00212B82 /* GameOverViewController.swift in Sources */,
 				F686A72C27A33E1600D1A91D /* AppDelegate.swift in Sources */,
 				F65D0C1927AAB7E7006BEBB8 /* SettingsScene.swift in Sources */,
+				F6C0CFA327B407C800212B82 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +748,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QGJM8YU43J;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chaporwave/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -749,6 +756,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -773,6 +781,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QGJM8YU43J;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chaporwave/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -780,6 +789,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
