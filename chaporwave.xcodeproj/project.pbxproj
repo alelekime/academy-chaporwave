@@ -1,0 +1,976 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		342D05472E7009F79DB2C180 /* Pods_chaporwaveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED34DDCDB35441A6FA5319DE /* Pods_chaporwaveTests.framework */; };
+		CA5099A71B279B32C2B16171 /* Pods_chaporwave_chaporwaveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A5E5E576ED79DE5711E317 /* Pods_chaporwave_chaporwaveUITests.framework */; };
+		F612C11D27BB5EBC004E8272 /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F612C11C27BB5EBC004E8272 /* PauseViewController.swift */; };
+		F612C11E27BC6AA3004E8272 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62A7C1727AD642F00F9FC8B /* GameKit.framework */; };
+		F61D021327B29653009449D0 /* Pods_chaporwave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DDE456770AE1ACF83522ED /* Pods_chaporwave.framework */; };
+		F686A72C27A33E1600D1A91D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A72B27A33E1600D1A91D /* AppDelegate.swift */; };
+		F686A72E27A33E1700D1A91D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F686A72D27A33E1700D1A91D /* GameScene.sks */; };
+		F686A73027A33E1700D1A91D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F686A72F27A33E1700D1A91D /* Actions.sks */; };
+		F686A73227A33E1700D1A91D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A73127A33E1700D1A91D /* GameScene.swift */; };
+		F686A73427A33E1700D1A91D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A73327A33E1700D1A91D /* GameViewController.swift */; };
+		F686A73727A33E1700D1A91D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F686A73527A33E1700D1A91D /* Main.storyboard */; };
+		F686A73927A33E1D00D1A91D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F686A73827A33E1D00D1A91D /* Assets.xcassets */; };
+		F686A73C27A33E1D00D1A91D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F686A73A27A33E1D00D1A91D /* LaunchScreen.storyboard */; };
+		F686A74627A33E1E00D1A91D /* chaporwaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A74527A33E1E00D1A91D /* chaporwaveTests.swift */; };
+		F686A75027A33E1E00D1A91D /* chaporwaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A74F27A33E1E00D1A91D /* chaporwaveUITests.swift */; };
+		F686A75227A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */; };
+		F686A75F27A3657200D1A91D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686A75E27A3657200D1A91D /* Node.swift */; };
+		F68B53AE27B5351500AF0DF3 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B53AD27B5351500AF0DF3 /* GameManager.swift */; };
+		F68BD2A127B2992500730219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2A027B2992500730219 /* GoogleService-Info.plist */; };
+		F68BD2A227B2992500730219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2A027B2992500730219 /* GoogleService-Info.plist */; };
+		F68BD2A327B2992500730219 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2A027B2992500730219 /* GoogleService-Info.plist */; };
+		F68BD2A727B2A63C00730219 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68BD2A627B2A63C00730219 /* GameOverScene.swift */; };
+		F68BD2A827B2A63C00730219 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68BD2A627B2A63C00730219 /* GameOverScene.swift */; };
+		F68BD2A927B2A63C00730219 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68BD2A627B2A63C00730219 /* GameOverScene.swift */; };
+		F68BD2AB27B2A65700730219 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2AA27B2A65700730219 /* GameOverScene.sks */; };
+		F68BD2AC27B2A65700730219 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2AA27B2A65700730219 /* GameOverScene.sks */; };
+		F68BD2AD27B2A65700730219 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F68BD2AA27B2A65700730219 /* GameOverScene.sks */; };
+		F6B0AF5727BCBE0A00DA56BC /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0AF5627BCBE0A00DA56BC /* Haptics.swift */; };
+		F6C0CFA327B407C800212B82 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0CFA227B407C800212B82 /* MenuViewController.swift */; };
+		F6C0CFA527B444ED00212B82 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0CFA427B444ED00212B82 /* GameOverViewController.swift */; };
+		F6CC87E027BA177C001934C4 /* Pangolin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC87DF27BA177C001934C4 /* Pangolin-Regular.ttf */; };
+		F6CC87E127BA177C001934C4 /* Pangolin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC87DF27BA177C001934C4 /* Pangolin-Regular.ttf */; };
+		F6CC87E227BA177C001934C4 /* Pangolin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC87DF27BA177C001934C4 /* Pangolin-Regular.ttf */; };
+		F6CC87E427BA8F31001934C4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC87E327BA8F31001934C4 /* SettingsViewController.swift */; };
+		F6CC87E527BA8F31001934C4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC87E327BA8F31001934C4 /* SettingsViewController.swift */; };
+		F6CC87E627BA8F31001934C4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC87E327BA8F31001934C4 /* SettingsViewController.swift */; };
+		F6FA83B827BE734500F10946 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6FA83B427BE734400F10946 /* gameover.mp3 */; };
+		F6FA83B927BE734500F10946 /* chaporwave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6FA83B527BE734500F10946 /* chaporwave.mp3 */; };
+		F6FA83BA27BE734500F10946 /* teabags.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6FA83B627BE734500F10946 /* teabags.mp3 */; };
+		F6FA83BC27BE812400F10946 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA83BB27BE812400F10946 /* MusicPlayer.swift */; };
+		F6FA83BE27BE88F100F10946 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6FA83BD27BE88F100F10946 /* click.mp3 */; };
+		F6FA83C027BEC31700F10946 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA83BF27BEC31700F10946 /* Defaults.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F686A74227A33E1E00D1A91D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F686A72027A33E1600D1A91D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F686A72727A33E1600D1A91D;
+			remoteInfo = chaporwave;
+		};
+		F686A74C27A33E1E00D1A91D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F686A72027A33E1600D1A91D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F686A72727A33E1600D1A91D;
+			remoteInfo = chaporwave;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D09C36E3FBEA52F16B771D3 /* Pods-chaporwaveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwaveTests.release.xcconfig"; path = "Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests.release.xcconfig"; sourceTree = "<group>"; };
+		21DDE456770AE1ACF83522ED /* Pods_chaporwave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chaporwave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		786A051CBDD9B8DC044AAE89 /* Pods-chaporwave-chaporwaveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwave-chaporwaveUITests.debug.xcconfig"; path = "Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		926601DC5E7ED70F38F5F916 /* Pods-chaporwave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwave.release.xcconfig"; path = "Target Support Files/Pods-chaporwave/Pods-chaporwave.release.xcconfig"; sourceTree = "<group>"; };
+		96BC71449BDD82274234E31A /* Pods-chaporwaveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwaveTests.debug.xcconfig"; path = "Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B30080E0B3B7270CE303EE7F /* Pods-chaporwave-chaporwaveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwave-chaporwaveUITests.release.xcconfig"; path = "Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C7A5E5E576ED79DE5711E317 /* Pods_chaporwave_chaporwaveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chaporwave_chaporwaveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCE1B98D7A36F73E51F6EF47 /* Pods-chaporwave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chaporwave.debug.xcconfig"; path = "Target Support Files/Pods-chaporwave/Pods-chaporwave.debug.xcconfig"; sourceTree = "<group>"; };
+		ED34DDCDB35441A6FA5319DE /* Pods_chaporwaveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chaporwaveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F612C11C27BB5EBC004E8272 /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
+		F62A7C1727AD642F00F9FC8B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		F62A7C1927AD68AF00F9FC8B /* chaporwave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = chaporwave.entitlements; sourceTree = "<group>"; };
+		F686A72827A33E1600D1A91D /* chaporwave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chaporwave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F686A72B27A33E1600D1A91D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F686A72D27A33E1700D1A91D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F686A72F27A33E1700D1A91D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		F686A73127A33E1700D1A91D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F686A73327A33E1700D1A91D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F686A73627A33E1700D1A91D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F686A73827A33E1D00D1A91D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F686A73B27A33E1D00D1A91D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F686A74127A33E1E00D1A91D /* chaporwaveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chaporwaveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F686A74527A33E1E00D1A91D /* chaporwaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaporwaveTests.swift; sourceTree = "<group>"; };
+		F686A74B27A33E1E00D1A91D /* chaporwaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chaporwaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F686A74F27A33E1E00D1A91D /* chaporwaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaporwaveUITests.swift; sourceTree = "<group>"; };
+		F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chaporwaveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F686A75E27A3657200D1A91D /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		F68B53AD27B5351500AF0DF3 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		F68BD2A027B2992500730219 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F68BD2A627B2A63C00730219 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		F68BD2AA27B2A65700730219 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		F6B0AF5627BCBE0A00DA56BC /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		F6C0CFA127B3EBB900212B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F6C0CFA227B407C800212B82 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F6C0CFA427B444ED00212B82 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		F6CC87DF27BA177C001934C4 /* Pangolin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pangolin-Regular.ttf"; sourceTree = "<group>"; };
+		F6CC87E327BA8F31001934C4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F6FA83B427BE734400F10946 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
+		F6FA83B527BE734500F10946 /* chaporwave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chaporwave.mp3; sourceTree = "<group>"; };
+		F6FA83B627BE734500F10946 /* teabags.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = teabags.mp3; sourceTree = "<group>"; };
+		F6FA83BB27BE812400F10946 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		F6FA83BD27BE88F100F10946 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
+		F6FA83BF27BEC31700F10946 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F686A72527A33E1600D1A91D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61D021327B29653009449D0 /* Pods_chaporwave.framework in Frameworks */,
+				F612C11E27BC6AA3004E8272 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F686A73E27A33E1E00D1A91D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342D05472E7009F79DB2C180 /* Pods_chaporwaveTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F686A74827A33E1E00D1A91D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5099A71B279B32C2B16171 /* Pods_chaporwave_chaporwaveUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CF5E14441E12B4EA2997644 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCE1B98D7A36F73E51F6EF47 /* Pods-chaporwave.debug.xcconfig */,
+				926601DC5E7ED70F38F5F916 /* Pods-chaporwave.release.xcconfig */,
+				786A051CBDD9B8DC044AAE89 /* Pods-chaporwave-chaporwaveUITests.debug.xcconfig */,
+				B30080E0B3B7270CE303EE7F /* Pods-chaporwave-chaporwaveUITests.release.xcconfig */,
+				96BC71449BDD82274234E31A /* Pods-chaporwaveTests.debug.xcconfig */,
+				0D09C36E3FBEA52F16B771D3 /* Pods-chaporwaveTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F612C11B27BB5EA9004E8272 /* Pause */ = {
+			isa = PBXGroup;
+			children = (
+				F612C11C27BB5EBC004E8272 /* PauseViewController.swift */,
+			);
+			path = Pause;
+			sourceTree = "<group>";
+		};
+		F62A7C1627AD642F00F9FC8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F62A7C1727AD642F00F9FC8B /* GameKit.framework */,
+				21DDE456770AE1ACF83522ED /* Pods_chaporwave.framework */,
+				C7A5E5E576ED79DE5711E317 /* Pods_chaporwave_chaporwaveUITests.framework */,
+				ED34DDCDB35441A6FA5319DE /* Pods_chaporwaveTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F65D0C1527AAB7C0006BEBB8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F6CC87E327BA8F31001934C4 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F66AEC1927A8091C0024C03D /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				F686A72D27A33E1700D1A91D /* GameScene.sks */,
+				F686A73127A33E1700D1A91D /* GameScene.swift */,
+				F686A73327A33E1700D1A91D /* GameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		F686A71F27A33E1600D1A91D = {
+			isa = PBXGroup;
+			children = (
+				F686A72A27A33E1600D1A91D /* chaporwave */,
+				F686A74427A33E1E00D1A91D /* chaporwaveTests */,
+				F686A74E27A33E1E00D1A91D /* chaporwaveUITests */,
+				F686A72927A33E1600D1A91D /* Products */,
+				F62A7C1627AD642F00F9FC8B /* Frameworks */,
+				8CF5E14441E12B4EA2997644 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		F686A72927A33E1600D1A91D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F686A72827A33E1600D1A91D /* chaporwave.app */,
+				F686A74127A33E1E00D1A91D /* chaporwaveTests.xctest */,
+				F686A74B27A33E1E00D1A91D /* chaporwaveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F686A72A27A33E1600D1A91D /* chaporwave */ = {
+			isa = PBXGroup;
+			children = (
+				F6FA83B227BE731600F10946 /* Music */,
+				F6CC87DE27BA1762001934C4 /* Font */,
+				F6C0CFA127B3EBB900212B82 /* Info.plist */,
+				F62A7C1927AD68AF00F9FC8B /* chaporwave.entitlements */,
+				F65D0C1527AAB7C0006BEBB8 /* Settings */,
+				F6C2014E27A81984006E8E4A /* Model */,
+				F68BD2A527B2A61A00730219 /* GameOver */,
+				F6C2014727A81536006E8E4A /* Menu */,
+				F612C11B27BB5EA9004E8272 /* Pause */,
+				F66AEC1927A8091C0024C03D /* Game */,
+				F686A72B27A33E1600D1A91D /* AppDelegate.swift */,
+				F686A72F27A33E1700D1A91D /* Actions.sks */,
+				F68BD2A027B2992500730219 /* GoogleService-Info.plist */,
+				F686A73527A33E1700D1A91D /* Main.storyboard */,
+				F686A73827A33E1D00D1A91D /* Assets.xcassets */,
+				F686A73A27A33E1D00D1A91D /* LaunchScreen.storyboard */,
+			);
+			path = chaporwave;
+			sourceTree = "<group>";
+		};
+		F686A74427A33E1E00D1A91D /* chaporwaveTests */ = {
+			isa = PBXGroup;
+			children = (
+				F686A74527A33E1E00D1A91D /* chaporwaveTests.swift */,
+			);
+			path = chaporwaveTests;
+			sourceTree = "<group>";
+		};
+		F686A74E27A33E1E00D1A91D /* chaporwaveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F686A74F27A33E1E00D1A91D /* chaporwaveUITests.swift */,
+				F686A75127A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift */,
+			);
+			path = chaporwaveUITests;
+			sourceTree = "<group>";
+		};
+		F68BD2A527B2A61A00730219 /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+				F68BD2A627B2A63C00730219 /* GameOverScene.swift */,
+				F68BD2AA27B2A65700730219 /* GameOverScene.sks */,
+				F6C0CFA427B444ED00212B82 /* GameOverViewController.swift */,
+			);
+			path = GameOver;
+			sourceTree = "<group>";
+		};
+		F6C2014727A81536006E8E4A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F6C0CFA227B407C800212B82 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		F6C2014E27A81984006E8E4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6B0AF5627BCBE0A00DA56BC /* Haptics.swift */,
+				F68B53AD27B5351500AF0DF3 /* GameManager.swift */,
+				F686A75E27A3657200D1A91D /* Node.swift */,
+				F6FA83BF27BEC31700F10946 /* Defaults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6CC87DE27BA1762001934C4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F6CC87DF27BA177C001934C4 /* Pangolin-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		F6FA83B227BE731600F10946 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				F6FA83B527BE734500F10946 /* chaporwave.mp3 */,
+				F6FA83BD27BE88F100F10946 /* click.mp3 */,
+				F6FA83B427BE734400F10946 /* gameover.mp3 */,
+				F6FA83B627BE734500F10946 /* teabags.mp3 */,
+				F6FA83BB27BE812400F10946 /* MusicPlayer.swift */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F686A72727A33E1600D1A91D /* chaporwave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F686A75527A33E1E00D1A91D /* Build configuration list for PBXNativeTarget "chaporwave" */;
+			buildPhases = (
+				87822BCBB5FE2F7AAE8741FC /* [CP] Check Pods Manifest.lock */,
+				F686A72427A33E1600D1A91D /* Sources */,
+				F686A72527A33E1600D1A91D /* Frameworks */,
+				F686A72627A33E1600D1A91D /* Resources */,
+				2AAE339352B77AA797A1EE49 /* [CP] Embed Pods Frameworks */,
+				F68BD2A427B29B1900730219 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chaporwave;
+			productName = chaporwave;
+			productReference = F686A72827A33E1600D1A91D /* chaporwave.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F686A74027A33E1E00D1A91D /* chaporwaveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F686A75827A33E1E00D1A91D /* Build configuration list for PBXNativeTarget "chaporwaveTests" */;
+			buildPhases = (
+				FFF3D20C9B7BEA89DE4EE7B1 /* [CP] Check Pods Manifest.lock */,
+				F686A73D27A33E1E00D1A91D /* Sources */,
+				F686A73E27A33E1E00D1A91D /* Frameworks */,
+				F686A73F27A33E1E00D1A91D /* Resources */,
+				3A9736BD44371E58F07F69D0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F686A74327A33E1E00D1A91D /* PBXTargetDependency */,
+			);
+			name = chaporwaveTests;
+			productName = chaporwaveTests;
+			productReference = F686A74127A33E1E00D1A91D /* chaporwaveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F686A74A27A33E1E00D1A91D /* chaporwaveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F686A75B27A33E1E00D1A91D /* Build configuration list for PBXNativeTarget "chaporwaveUITests" */;
+			buildPhases = (
+				3AD5A0CBF574022DC0C7CC2C /* [CP] Check Pods Manifest.lock */,
+				F686A74727A33E1E00D1A91D /* Sources */,
+				F686A74827A33E1E00D1A91D /* Frameworks */,
+				F686A74927A33E1E00D1A91D /* Resources */,
+				06495053B323A4F697291D68 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F686A74D27A33E1E00D1A91D /* PBXTargetDependency */,
+			);
+			name = chaporwaveUITests;
+			productName = chaporwaveUITests;
+			productReference = F686A74B27A33E1E00D1A91D /* chaporwaveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F686A72027A33E1600D1A91D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F686A72727A33E1600D1A91D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F686A74027A33E1E00D1A91D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F686A72727A33E1600D1A91D;
+					};
+					F686A74A27A33E1E00D1A91D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F686A72727A33E1600D1A91D;
+					};
+				};
+			};
+			buildConfigurationList = F686A72327A33E1600D1A91D /* Build configuration list for PBXProject "chaporwave" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F686A71F27A33E1600D1A91D;
+			productRefGroup = F686A72927A33E1600D1A91D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F686A72727A33E1600D1A91D /* chaporwave */,
+				F686A74027A33E1E00D1A91D /* chaporwaveTests */,
+				F686A74A27A33E1E00D1A91D /* chaporwaveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F686A72627A33E1600D1A91D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6CC87E027BA177C001934C4 /* Pangolin-Regular.ttf in Resources */,
+				F686A73727A33E1700D1A91D /* Main.storyboard in Resources */,
+				F68BD2A127B2992500730219 /* GoogleService-Info.plist in Resources */,
+				F6FA83B927BE734500F10946 /* chaporwave.mp3 in Resources */,
+				F686A72E27A33E1700D1A91D /* GameScene.sks in Resources */,
+				F686A73927A33E1D00D1A91D /* Assets.xcassets in Resources */,
+				F6FA83B827BE734500F10946 /* gameover.mp3 in Resources */,
+				F6FA83BA27BE734500F10946 /* teabags.mp3 in Resources */,
+				F686A73C27A33E1D00D1A91D /* LaunchScreen.storyboard in Resources */,
+				F6FA83BE27BE88F100F10946 /* click.mp3 in Resources */,
+				F686A73027A33E1700D1A91D /* Actions.sks in Resources */,
+				F68BD2AB27B2A65700730219 /* GameOverScene.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F686A73F27A33E1E00D1A91D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6CC87E127BA177C001934C4 /* Pangolin-Regular.ttf in Resources */,
+				F68BD2AC27B2A65700730219 /* GameOverScene.sks in Resources */,
+				F68BD2A227B2992500730219 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F686A74927A33E1E00D1A91D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6CC87E227BA177C001934C4 /* Pangolin-Regular.ttf in Resources */,
+				F68BD2AD27B2A65700730219 /* GameOverScene.sks in Resources */,
+				F68BD2A327B2992500730219 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06495053B323A4F697291D68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chaporwave-chaporwaveUITests/Pods-chaporwave-chaporwaveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AAE339352B77AA797A1EE49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwave/Pods-chaporwave-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwave/Pods-chaporwave-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chaporwave/Pods-chaporwave-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A9736BD44371E58F07F69D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chaporwaveTests/Pods-chaporwaveTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AD5A0CBF574022DC0C7CC2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chaporwave-chaporwaveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87822BCBB5FE2F7AAE8741FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chaporwave-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F68BD2A427B29B1900730219 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		FFF3D20C9B7BEA89DE4EE7B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chaporwaveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F686A72427A33E1600D1A91D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F612C11D27BB5EBC004E8272 /* PauseViewController.swift in Sources */,
+				F6FA83C027BEC31700F10946 /* Defaults.swift in Sources */,
+				F686A73227A33E1700D1A91D /* GameScene.swift in Sources */,
+				F6FA83BC27BE812400F10946 /* MusicPlayer.swift in Sources */,
+				F6B0AF5727BCBE0A00DA56BC /* Haptics.swift in Sources */,
+				F68B53AE27B5351500AF0DF3 /* GameManager.swift in Sources */,
+				F686A73427A33E1700D1A91D /* GameViewController.swift in Sources */,
+				F6CC87E427BA8F31001934C4 /* SettingsViewController.swift in Sources */,
+				F68BD2A727B2A63C00730219 /* GameOverScene.swift in Sources */,
+				F686A75F27A3657200D1A91D /* Node.swift in Sources */,
+				F6C0CFA527B444ED00212B82 /* GameOverViewController.swift in Sources */,
+				F686A72C27A33E1600D1A91D /* AppDelegate.swift in Sources */,
+				F6C0CFA327B407C800212B82 /* MenuViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F686A73D27A33E1E00D1A91D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68BD2A827B2A63C00730219 /* GameOverScene.swift in Sources */,
+				F686A74627A33E1E00D1A91D /* chaporwaveTests.swift in Sources */,
+				F6CC87E527BA8F31001934C4 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F686A74727A33E1E00D1A91D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F686A75227A33E1E00D1A91D /* chaporwaveUITestsLaunchTests.swift in Sources */,
+				F68BD2A927B2A63C00730219 /* GameOverScene.swift in Sources */,
+				F686A75027A33E1E00D1A91D /* chaporwaveUITests.swift in Sources */,
+				F6CC87E627BA8F31001934C4 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F686A74327A33E1E00D1A91D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F686A72727A33E1600D1A91D /* chaporwave */;
+			targetProxy = F686A74227A33E1E00D1A91D /* PBXContainerItemProxy */;
+		};
+		F686A74D27A33E1E00D1A91D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F686A72727A33E1600D1A91D /* chaporwave */;
+			targetProxy = F686A74C27A33E1E00D1A91D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F686A73527A33E1700D1A91D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F686A73627A33E1700D1A91D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F686A73A27A33E1D00D1A91D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F686A73B27A33E1D00D1A91D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F686A75327A33E1E00D1A91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F686A75427A33E1E00D1A91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F686A75627A33E1E00D1A91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE1B98D7A36F73E51F6EF47 /* Pods-chaporwave.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = chaporwave/chaporwave.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QGJM8YU43J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chaporwave/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alelekime.chaporwave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F686A75727A33E1E00D1A91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 926601DC5E7ED70F38F5F916 /* Pods-chaporwave.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = chaporwave/chaporwave.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = QGJM8YU43J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chaporwave/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alelekime.chaporwave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F686A75927A33E1E00D1A91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BC71449BDD82274234E31A /* Pods-chaporwaveTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QGJM8YU43J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alelekime.chaporwaveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chaporwave.app/chaporwave";
+			};
+			name = Debug;
+		};
+		F686A75A27A33E1E00D1A91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D09C36E3FBEA52F16B771D3 /* Pods-chaporwaveTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QGJM8YU43J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alelekime.chaporwaveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chaporwave.app/chaporwave";
+			};
+			name = Release;
+		};
+		F686A75C27A33E1E00D1A91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 786A051CBDD9B8DC044AAE89 /* Pods-chaporwave-chaporwaveUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QGJM8YU43J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alelekime.chaporwaveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = chaporwave;
+			};
+			name = Debug;
+		};
+		F686A75D27A33E1E00D1A91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B30080E0B3B7270CE303EE7F /* Pods-chaporwave-chaporwaveUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QGJM8YU43J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = alelekime.chaporwaveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = chaporwave;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F686A72327A33E1600D1A91D /* Build configuration list for PBXProject "chaporwave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F686A75327A33E1E00D1A91D /* Debug */,
+				F686A75427A33E1E00D1A91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F686A75527A33E1E00D1A91D /* Build configuration list for PBXNativeTarget "chaporwave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F686A75627A33E1E00D1A91D /* Debug */,
+				F686A75727A33E1E00D1A91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F686A75827A33E1E00D1A91D /* Build configuration list for PBXNativeTarget "chaporwaveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F686A75927A33E1E00D1A91D /* Debug */,
+				F686A75A27A33E1E00D1A91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F686A75B27A33E1E00D1A91D /* Build configuration list for PBXNativeTarget "chaporwaveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F686A75C27A33E1E00D1A91D /* Debug */,
+				F686A75D27A33E1E00D1A91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F686A72027A33E1600D1A91D /* Project object */;
+}

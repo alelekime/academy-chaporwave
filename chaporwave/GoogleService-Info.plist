@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>127524528976-8l60s3dab9d6ag39g7o5q2qg3g3m9ans.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.127524528976-8l60s3dab9d6ag39g7o5q2qg3g3m9ans</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBKcFgdjFg-zy2QRJJx1acTm8H07yADn2A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>127524528976</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>alelekime.chaporwave</string>
+	<key>PROJECT_ID</key>
+	<string>chaporwave</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chaporwave.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:127524528976:ios:80c1822882d64349238255</string>
+</dict>
+</plist>
