@@ -1,8 +1,8 @@
 //
-//  GameViewController.swift
+//  GameViewController2.swift
 //  chaporwave
 //
-//  Created by Alessandra Souza da Silva on 27/01/22.
+//  Created by Alessandra Souza da Silva on 22/02/22.
 //
 
 import UIKit
@@ -11,8 +11,9 @@ import GameplayKit
 import GoogleMobileAds
 import GameKit
 
+
 class GameViewController: UIViewController, GADFullScreenContentDelegate {
-    
+
     var scene: GameScene!
     var bannerView: GADBannerView!
     var interstitial: GADInterstitialAd?
@@ -20,33 +21,35 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
     private var hapticManager = HapticManager()
     private var backgroundAudio = MusicPlayer()
     
+    
+    var gameTimer: GameTimer!
+    
+    @IBOutlet weak var teaImageTimer: UIImageView!
     @IBOutlet weak var currentText: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
             scene = SKScene(fileNamed: "GameScene") as? GameScene
             scene.gameVC = self
-            // Set the scale mode to scale to fit the window
             scene.scaleMode = .aspectFill
-            
-            // Present the scene
             view.presentScene(scene)
-            
-            
             view.ignoresSiblingOrder = true
-            
         }
+        requestBanner()
+        requestInterstitial()
+        gameTimer = GameTimer(imageTea: teaImageTimer, gameScene: scene)
+        gameTimer.startTimer()
+    }
+    
+    func requestBanner() {
         bannerView = GADBannerView(adSize: GADAdSizeBanner)
         addBannerViewToView(bannerView)
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
-        requestInterstitial()
-        
     }
+    
     func requestInterstitial() {
         let request = GADRequest()
         GADInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/4411468910",
@@ -58,8 +61,7 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
             }
             interstitial = ad
             interstitial?.fullScreenContentDelegate = self
-        }
-        )
+        })
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
@@ -85,7 +87,7 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
     
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         print("Ad did fail to present full screen content.")
-        gameOver()
+        print("********")
     }
     
     func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
@@ -95,8 +97,9 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         print("Ad did dismiss full screen content.")
         requestInterstitial()
-        gameOver()
+        print("********")
     }
+
     
     func gameOver() {
         
@@ -106,10 +109,8 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
         
         vc.gameVC = self
         
-        
         navigationController?.pushViewController(vc, animated: false)
-        
-        // Submit score to GC leaderboard
+    
         GKLeaderboard.submitScore(
             GameManager.score,
             context: 0,
@@ -118,13 +119,18 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
         ) { error in
             print(error ?? "aaaa")
         }
-        
-        
+    }
+    func stopTimer() {
+        gameTimer.stopTimer()
+    }
+    func pauseTimer() {
+        gameTimer.pauseTimer()
     }
     
     func reset() {
         scene.reset()
         scene.resetScore()
+        gameTimer.reset()
         
     }
     
@@ -140,7 +146,7 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
         return true
     }
     
-    @IBAction func close(_ sender: Any) {
+    @IBAction func pause(_ sender: Any) {
         hapticManager?.playClick()
         backgroundAudio.startMusic(music: "click")
         
@@ -149,6 +155,7 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
         let vc = storyboard.instantiateViewController(withIdentifier: "Pause")
         
         navigationController?.pushViewController(vc, animated: false)
+        gameTimer.pauseTimer()
     }
     
     
@@ -175,4 +182,5 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+
 }
