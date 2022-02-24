@@ -62,24 +62,6 @@ class SettingsViewController: UIViewController {
         navigationController?.popViewController(animated: false)
         
     }
-    @IBAction func play(_ sender: Any) {
-        hapticManager?.playClick()
-        backgroundAudio.startMusic(music: "click")
-        navigationController?.popViewController(animated: false)
-        
-    }
-    @IBAction func newGame(_ sender: Any) {
-        hapticManager?.playClick()
-        backgroundAudio.startMusic(music: "click")
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(withIdentifier: "Game")
-        
-       
-        navigationController?.pushViewController(vc, animated: false)
-        
-    }
     
     /*
      // MARK: - Navigation

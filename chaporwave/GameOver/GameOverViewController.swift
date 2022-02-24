@@ -25,17 +25,6 @@ class GameOverViewController: UIViewController, GKGameCenterControllerDelegate {
         scoreLabel.text = String(format: "%04d", GameManager.score)
         
     }
-    @IBAction func settings(_ sender: Any) {
-        hapticManager?.playClick()
-        backgroundAudio.startMusic(music: "click")
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(withIdentifier: "Settings")
-        
-        navigationController?.pushViewController(vc, animated: false)
-        
-    }
     
     @IBAction func newGame(_ sender: Any) {
         hapticManager?.playClick()

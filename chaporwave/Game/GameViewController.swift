@@ -20,13 +20,19 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
     
     private var hapticManager = HapticManager()
     private var backgroundAudio = MusicPlayer()
+    var gameTimer: GameTimer!   
     
-    
-    var gameTimer: GameTimer!
-    
+
+    @IBOutlet weak var scoreText: UILabel!
     @IBOutlet weak var teaImageTimer: UIImageView!
     @IBOutlet weak var currentText: UILabel!
 
+    @IBOutlet weak var heartOne: UIImageView!
+    @IBOutlet weak var heartTwo: UIImageView!
+    @IBOutlet weak var heartThree: UIImageView!
+    var numberHearts = 3
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let view = self.view as! SKView? {
@@ -39,8 +45,15 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
         requestBanner()
         requestInterstitial()
         gameTimer = GameTimer(imageTea: teaImageTimer, gameScene: scene)
-        gameTimer.startTimer()
+
+        scoreText.text = String(format: "%04d", GameManager.score)
+        updateHeart(number: 0)
     }
+    func updateTime(deltaTime: TimeInterval) {
+        gameTimer.update(deltaTime: deltaTime)
+    }
+    
+    
     
     func requestBanner() {
         bannerView = GADBannerView(adSize: GADAdSizeBanner)
@@ -48,6 +61,27 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+    }
+    func startHearts() {
+        heartOne.image = UIImage(systemName: "heart.fill")?.withTintColor(UIColor(named: "linePurple")!)
+        heartTwo.image = UIImage(systemName: "heart.fill")?.withTintColor(UIColor(named: "linePurple")!)
+        heartThree.image = UIImage(systemName: "heart.fill")?.withTintColor(UIColor(named: "linePurple")!)
+        
+    }
+    
+    func updateHeart(number: Int) {
+        print(numberHearts)
+        switch number {
+        case 3:
+            heartOne.image = UIImage(systemName: "heart")?.withTintColor(UIColor(named: "linePurple")!)
+        case 2:
+            heartTwo.image = UIImage(systemName: "heart")?.withTintColor(UIColor(named: "linePurple")!)
+        case 1:
+            heartThree.image = UIImage(systemName: "heart")?.withTintColor(UIColor(named: "linePurple")!)
+        
+        default:
+            startHearts()
+        }
     }
     
     func requestInterstitial() {
@@ -120,17 +154,23 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
             print(error ?? "aaaa")
         }
     }
-    func stopTimer() {
-        gameTimer.stopTimer()
+    
+    func resetTimer() {
+        gameTimer!.reset()
     }
+    
+    
     func pauseTimer() {
-        gameTimer.pauseTimer()
+        gameTimer!.pauseTimer()
     }
     
     func reset() {
         scene.reset()
         scene.resetScore()
-        gameTimer.reset()
+        gameTimer!.reset()
+        numberHearts = 3
+        updateHeart(number: 0)
+        
         
     }
     
@@ -149,23 +189,12 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
     @IBAction func pause(_ sender: Any) {
         hapticManager?.playClick()
         backgroundAudio.startMusic(music: "click")
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(withIdentifier: "Pause")
-        
-        navigationController?.pushViewController(vc, animated: false)
         gameTimer.pauseTimer()
-    }
-    
-    
-    @IBAction func settingsPressed(_ sender: Any) {
-        hapticManager?.playClick()
-        backgroundAudio.startMusic(music: "click")
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let vc = storyboard.instantiateViewController(withIdentifier: "Settings")
-        
+        let vc = storyboard.instantiateViewController(withIdentifier: "Pause") as! PauseViewController
+        vc.gameVC = self
         navigationController?.pushViewController(vc, animated: false)
         
     }

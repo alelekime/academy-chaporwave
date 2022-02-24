@@ -7,18 +7,15 @@ import AVFoundation
 
 
 class GameScene: SKScene {
-
-    private var nodeScore: SKLabelNode!
     
+    var lastUpdate: TimeInterval = 0
     
     private var nodePrimary: Node!
     private var nodeLeft: Node!
     private var nodeRight: Node!
     
-    private var teaCup: SKSpriteNode!
-    
     private var hapticManager: HapticManager!
-  
+
     private var currentAttribute: Attribute!
     
     weak var gameVC: GameViewController!
@@ -26,8 +23,6 @@ class GameScene: SKScene {
     private var backgroundAudio = MusicPlayer()
 
     override func didMove(to view: SKView) {
-        addScore()
-        //addTeaCup()
         reset()
         hapticManager = HapticManager()
     }
@@ -51,32 +46,13 @@ class GameScene: SKScene {
     }
     
     
-    func addScore() {
-        nodeScore = SKLabelNode(fontNamed: "Pangolin-Regular")
-        nodeScore.fontSize = 90
-        nodeScore.fontColor = UIColor(named: "darkBeige")
-        nodeScore.position = CGPoint(x: 0, y: 500)
-        nodeScore.text = "0000"
-        
-        
-        addChild(nodeScore)
-    }
-    
-    func addTeaCup() {
-        teaCup = SKSpriteNode(imageNamed: "Teacup")
-        teaCup.position = CGPoint(x: 0, y: -450)
-        
-        addChild(teaCup)
-    }
-    
-    
     func createNodes() {
         nodePrimary = Node()
         nodePrimary.node.setScale(0.7)
         nodeLeft = nodePrimary.getMatch(condition: currentAttribute)
-        nodeLeft.node.setScale(0.6)
+        nodeLeft.node.setScale(0.7)
         nodeRight = nodePrimary.getUnmatch(condition: currentAttribute)
-        nodeRight.node.setScale(0.6)
+        nodeRight.node.setScale(0.7)
         
         if Int.random(in: 0..<100) < 50{
             swap(&nodeLeft, &nodeRight)
@@ -103,7 +79,6 @@ class GameScene: SKScene {
         nodePrimary.node.removeFromParent()
         nodeLeft.node.removeFromParent()
         nodeRight.node.removeFromParent()
-        nodeScore.removeFromParent()
     }
     
     
@@ -111,18 +86,34 @@ class GameScene: SKScene {
     func updateScore(check: Bool) {
         if check {
             GameManager.score += 10
-        } 
-        nodeScore.text = String(format: "%04d", GameManager.score)
-        print("score: \(GameManager.score)")
+        }
+        updateScoreScreen()
         
     }
+    
+    func updateScoreScreen() {
+        gameVC.scoreText.text = String(format: "%04d", GameManager.score)
+    }
+    
     func gameOverCheck(check: Bool){
         if !check {
-            Analytics.logEvent("level_end", parameters: nil)
-            backgroundAudio.startGameOverMusic()
-            gameVC!.showAd()
-            gameVC?.gameOver()
+            if gameVC.numberHearts == 1 {
+                gameVC.updateHeart(number: gameVC.numberHearts)
+                gameOver()
+            } else {
+                gameVC.updateHeart(number: gameVC.numberHearts)
+                gameVC.numberHearts -= 1
+                backgroundAudio.startGameOverMusic()
+            }
         }
+    }
+    
+    func gameOver() {
+        Analytics.logEvent("level_end", parameters: nil)
+        backgroundAudio.startGameOverMusic()
+        gameVC!.showAd()
+        gameVC?.gameOver()
+        gameVC.pauseTimer()
     }
     
     func reset() {
@@ -134,16 +125,18 @@ class GameScene: SKScene {
         
         updateAttributeNode()
         createNodes()
-    }
+        
+        
+    }    
     
     func resetScore() {
         GameManager.score = 0
-        nodeScore.text = String(format: "%04d", GameManager.score)
-        
+        updateScoreScreen()
     }
     
     func updateGame(check: Bool) {
         updateScore(check: check)
+        gameVC.resetTimer()
         reset()
     }
     
@@ -192,7 +185,15 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        if lastUpdate == 0 {
+            lastUpdate = currentTime
+            return
+        }
+        
+        var deltaTime = currentTime - lastUpdate
+        deltaTime = min(deltaTime, 0.1)
+        lastUpdate = currentTime
+        gameVC.updateTime(deltaTime: deltaTime)
     }
     
 }

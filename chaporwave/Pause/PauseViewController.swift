@@ -12,6 +12,8 @@ class PauseViewController: UIViewController {
     private var hapticManager = HapticManager()
     private var backgroundAudio = MusicPlayer()
     
+    var gameVC: GameViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,18 +23,27 @@ class PauseViewController: UIViewController {
     @IBAction func tutorial(_ sender: Any) {
     }
     
+    @IBAction func settings(_ sender: Any) {
+        hapticManager?.playClick()
+        backgroundAudio.startMusic(music: "click")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "Settings") as! SettingsViewController
+        
+        navigationController?.pushViewController(vc, animated: false)
+        
+    }
+    
     @IBAction func newGame(_ sender: Any) {
         hapticManager?.playClick()
         backgroundAudio.startMusic(music: "click")
-    
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        gameVC.reset()
+        navigationController?.popViewController(animated: false)
         
-        let vc = storyboard.instantiateViewController(withIdentifier: "Game")
-        
-        navigationController?.pushViewController(vc, animated: false)
     }
     
     @IBAction func resume(_ sender: Any) {
+        gameVC.gameTimer.pauseTimer()
         hapticManager?.playClick()
         backgroundAudio.startMusic(music: "click")
         navigationController?.popViewController(animated: false)
