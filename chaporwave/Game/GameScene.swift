@@ -103,7 +103,7 @@ class GameScene: SKScene {
             } else {
                 gameVC.updateHeart(number: gameVC.numberHearts)
                 gameVC.numberHearts -= 1
-                backgroundAudio.startGameOverMusic()
+               
             }
         }
     }
@@ -147,8 +147,13 @@ class GameScene: SKScene {
     func testMacth(on node: Node, location: CGPoint) {
         if atPoint(location) == node.node {
             hapticManager?.playTeaBag()
-            backgroundAudio.startMusic(music: "teabags")
+            
             let check = matchIsPrimaryNode(node)
+            if check {
+                backgroundAudio.startMusic(music: "teabags")
+            } else {
+                backgroundAudio.startGameOverMusic()
+            }
             gameOverCheck(check: check)
             updateGame(check: check)
         }

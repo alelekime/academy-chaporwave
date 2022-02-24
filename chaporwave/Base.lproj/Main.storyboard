@@ -836,7 +836,6 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28" weight="bold"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="leaderboard:" destination="UCW-Ps-Tad" eventType="touchUpInside" id="zO3-Gz-7Jl"/>
                                                             <action selector="settings:" destination="UCW-Ps-Tad" eventType="touchUpInside" id="1ZV-bh-JDS"/>
                                                         </connections>
                                                     </button>

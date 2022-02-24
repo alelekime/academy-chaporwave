@@ -18,6 +18,8 @@ class MenuViewController: UIViewController, GKGameCenterControllerDelegate {
     
     private var backgroundAudio = MusicPlayer()
     
+    var gameVC: GameViewController!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,7 @@ class MenuViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBAction func play(_ sender: Any) {
         hapticManager?.playClick()
         backgroundAudio.startMusic(music: "click")
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let vc = storyboard.instantiateViewController(withIdentifier: "Game")

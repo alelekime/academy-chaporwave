@@ -49,6 +49,7 @@ class GameViewController: UIViewController, GADFullScreenContentDelegate {
         scoreText.text = String(format: "%04d", GameManager.score)
         updateHeart(number: 0)
     }
+    
     func updateTime(deltaTime: TimeInterval) {
         gameTimer.update(deltaTime: deltaTime)
     }

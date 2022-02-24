@@ -50,6 +50,7 @@ class GameOverViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBAction func menu(_ sender: Any) {
         hapticManager?.playClick()
         backgroundAudio.startMusic(music: "click")
+        gameVC.reset()
         navigationController?.popToRootViewController(animated: false)
     
         

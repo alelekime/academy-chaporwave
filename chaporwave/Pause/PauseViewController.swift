@@ -53,6 +53,7 @@ class PauseViewController: UIViewController {
     @IBAction func menu(_ sender: Any) {
         hapticManager?.playClick()
         backgroundAudio.startMusic(music: "click")
+        gameVC.reset()
         navigationController?.popToRootViewController(animated: false)
         
     }
