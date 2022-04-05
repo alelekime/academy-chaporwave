@@ -8,4 +8,6 @@ Developing chaporwave was one the best experience that we have ever had in Progr
 
 # download
 
+Available on App Store, iOS 14.0 or up
+
 <https://apps.apple.com/br/app/chaporwave/id1608187923?l=en>
